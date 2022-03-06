@@ -5,10 +5,10 @@
 
 double pown(double value, uint16_t n) {
 uint64_t i;
-  double x = 1;
+double st = 1;
   for (i = 1; i <= n; i++)
-      x *= value;
-  return x;
+      st *= value;
+  return st;
 // return pow (value, n);
 }
 
