@@ -23,30 +23,28 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-double expp = 0;
+double n = 1;
   for (int i = 1; i <= count; i++) {
-    expp += calcItem(x, i);
+    n += calcItem(x, i);
   }
-  return expp;
+  return n;
 }
 
 double sinn(double x, uint16_t count) {
-double sine;
-    if (count == 1) {
-        return x;
-    } else {
-        sine = (pown(-1, count - 1) * calcItem(x, 2 * count - 1));
-        return sine + sinn(x, count - 1);
+double n = 0;
+    for (uint16_t c = 1; c <= count; c++) {
+        n += pown(-1, c-1) * (pown(x, (2 * c)-1) / fact((2 * c) - 1));
     }
+    return  n;
 }
 
 double cosn(double x, uint16_t count) {
-double coss;
-    if (count == 1) {
-        return 1;
-    } else {
-        coss = (pown(-1, count - 1) * calcItem(x, 2 * count - 2));
-        return coss + cosn(x, count - 1);
+double n = 0;
+    uint64_t c = 1;
+    while (c <= count) {
+        n += pown(-1, c - 1) * pown(x, (2 * c) - 2) / fact((2 * c) - 2);
+        c += 1;
     }
+    return  n;
 }
 
