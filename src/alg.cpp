@@ -3,17 +3,19 @@
 #include <cmath>
 #include "alg.h"
 
-
 double pown(double value, uint16_t n) {
   return pow (value, n);
 }
 
 uint64_t fact(uint16_t n) {
-  uint64_t i = 1, hs = 1;
-  for (i = 1; i <= n; i++) {
-  hs = hs * i;
+  double f = 1;
+  if (n > 1) {
+    for (int i = 1; i <= n; i++)
+      f = f * i;
+    return f;
+  } else {
+    return 1;
   }
-return 0;
 }
 
 double calcItem(double x, uint16_t n) {
