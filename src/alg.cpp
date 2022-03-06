@@ -4,7 +4,12 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-return pow (value, n);
+uint64_t i;
+  double x = 1;
+  for (i = 1; i <= n; i++)
+      x *= value;
+  return x;
+// return pow (value, n);
 }
 
 uint64_t fact(uint16_t n) {
