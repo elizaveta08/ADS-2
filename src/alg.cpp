@@ -32,7 +32,7 @@ double expp = 1;
 
 double sinn(double x, uint16_t count) {
 double sinn = 0;
-for (uint16_t i = 1; i <= cout; i++) {
+for (uint16_t i = 1; i <= count; i++) {
   sinn += pown((-1), i-1)*calcItem(x, 2*i-1);
 }
 return sinn;
@@ -40,7 +40,7 @@ return sinn;
 
 double cosn(double x, uint16_t count) {
 double coss = 0;
-for (uint16_t i = 1; i <= cout; i++) {
+for (uint16_t i = 1; i <= count; i++) {
     coss += pown((-1), i-1)*calcItem(x, 2*i-2);
   }
   return coss;
