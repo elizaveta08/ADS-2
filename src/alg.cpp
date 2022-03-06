@@ -4,7 +4,7 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-return pow (value, n);
+return uint16_t pow (value, n);
 }
 
 uint64_t fact(uint16_t n) {
