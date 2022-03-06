@@ -4,7 +4,7 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
- return pow (value, n);
+return pow (value, n);
 }
 
 uint64_t fact(uint16_t n) {
@@ -32,16 +32,16 @@ double expp = 1;
 
 double sinn(double x, uint16_t count) {
 double sinn = 0;
-for (int i = count; i > 0; i--) {
-  sinn += pown((-1), i-1)*(pown(x, 2*i-1) / fact(2*i-1));
+for (uint16_t i = 1; i <= cout; i++) {
+  sinn += pown((-1), i-1)*calcItem(x, 2*i-1);
 }
 return sinn;
 }
 
 double cosn(double x, uint16_t count) {
- double coss = 0;
-  for (int i = count; i > 0; i--) {
-    coss += pown((-1), i-1)*(pown(x, 2*i-2) / fact(2*i-2));
+double coss = 0;
+for (uint16_t i = 1; i <= cout; i++) {
+    coss += pown((-1), i-1)*calcItem(x, 2*i-2);
   }
   return coss;
 }
