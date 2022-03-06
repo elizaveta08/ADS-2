@@ -8,7 +8,7 @@ double pown(double value, uint16_t n) {
 }
 
 uint64_t fact(uint16_t n) {
-  double f = 1;
+  uint16_t f = 1;
   if (n > 1) {
     for (int i = 1; i <= n; i++)
       f = f * i;
@@ -41,7 +41,7 @@ double sine;
 }
 
 double cosn(double x, uint16_t count) {
- double coss;
+double coss;
     if (count == 1) {
         return 1;
     } else {
