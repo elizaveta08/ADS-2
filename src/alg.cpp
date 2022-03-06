@@ -29,18 +29,22 @@ double expp = 1;
 }
 
 double sinn(double x, uint16_t count) {
-double sinn = 0;
-for (int i = count; i > 0; i--) {
-  sinn += pown((-1), i-1)*(pown(x, 2*i-1) / fact(2*i-1));
-}
-return sinn;
+double sine;
+    if (count == 1) {
+        return x;
+    } else {
+        sine = (pown(-1, count - 1) * calcItem(x, 2 * count - 1));
+        return sine + sinn(x, count - 1);
+    }
 }
 
 double cosn(double x, uint16_t count) {
-double coss = 0;
-  for (int i = count; i > 0; i--) {
-    coss += pown((-1), i-1)*(pown(x, 2*i-2) / fact(2*i-2));
-  }
-  return coss;
+ double coss;
+    if (count == 1) {
+        return 1;
+    } else {
+        coss = (pown(-1, count - 1) * calcItem(x, 2 * count - 2));
+        return coss + cosn(x, count - 1);
+    }
 }
 
