@@ -2,9 +2,11 @@
 #include <cstdint>
 #include <cmath>
 #include "alg.h"
+
 double pown(double value, uint16_t n) {
   return pow (value, n);
 }
+
 uint64_t fact(uint16_t n) {
   double f = 1;
   if (n > 1) {
