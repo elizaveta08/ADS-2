@@ -23,7 +23,7 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-double expp = 1;
+double expp = 0;
   for (int i = 1; i <= count; i++) {
     expp += calcItem(x, i);
   }
