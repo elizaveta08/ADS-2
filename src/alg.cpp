@@ -13,6 +13,7 @@ uint64_t fact(uint16_t n) {
   for (i = 1; i <= n; i++) {
   hs = hs * i;
   }
+return 0;
 }
 
 double calcItem(double x, uint16_t n) {
