@@ -4,7 +4,7 @@
 #include "alg.h"
 
 double pown(double value, uint16_t n) {
-  return pow (value, n);
+ return pow (value, n);
 }
 
 uint64_t fact(uint16_t n) {
@@ -17,9 +17,11 @@ uint64_t fact(uint16_t n) {
     return 1;
   }
 }
+
 double calcItem(double x, uint16_t n) {
   return pown(x, n) / fact(n);
 }
+
 double expn(double x, uint16_t count) {
 double expp = 1;
   for (int i = 1; i <= count; i++) {
@@ -27,21 +29,19 @@ double expp = 1;
   }
   return expp;
 }
+
 double sinn(double x, uint16_t count) {
-double sine;
-    if (count == 1) {
-        return x;
-    } else {
-        sine = (pown(-1, count - 1) * calcItem(x, 2 * count - 1));
-        return sine + sinn(x, count - 1);
-    }
+double sinn = 0;
+for (int i = count; i > 0; i--) {
+  sinn += pown((-1), i-1)*(pown(x, 2*i-1) / fact(2*i-1));
 }
+return sinn;
+}
+
 double cosn(double x, uint16_t count) {
- double coss;
-    if (count == 1) {
-        return 1;
-    } else {
-        coss = (pown(-1, count - 1) * calcItem(x, 2 * count - 2));
-        return coss + cosn(x, count - 1);
-    }
+ double coss = 0;
+  for (int i = count; i > 0; i--) {
+    coss += pown((-1), i-1)*(pown(x, 2*i-2) / fact(2*i-2));
+  }
+  return coss;
 }
