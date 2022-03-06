@@ -30,7 +30,7 @@ double expp = 1;
 double sinn(double x, uint16_t count) {
 double sinn = 0;
  for (int i = count; i > 0; i--) {
-   sinn += pown((-1), i-1)*(pown(x, 2*i-1)/fact(2*i-1));
+   sinn += pown((-1), i-1)*(pown(x, 2*i-1) / fact(2*i-1));
  }
  return sinn;
 }
@@ -38,7 +38,7 @@ double sinn = 0;
 double cosn(double x, uint16_t count) {
 double coss = 0;
   for (int i = count; i > 0; i--) {
-    coss += pown((-1), i-1)*(pown(x, 2*i-2)/fact(2*i-2));
+    coss += pown((-1), i-1)*(pown(x, 2*i-2) / fact(2*i-2));
   }
   return coss;
 }
